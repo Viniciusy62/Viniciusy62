@@ -1,4 +1,4 @@
-## Olá! Sou Vinicius de Andrade e estou aprendendo programação para ajudar pessoas!
+## Olá! Meu nome é Vinicius de Andrade e estou me desenvolvendo como programador para criar soluções que colaborem com a vida das pessoas!
 <div  align="center">  
   <div>
     <a href="https://github.com/viniciusy62">
