@@ -4,8 +4,8 @@ name: snake
 # Controlador do tempo que sera feito a atualização dos arquivos.
 on:
   schedule:
-      # Será atualizado a cada 5 horas.
-    - cron: "0 */5 * * *"
+      # Será atualizado a cada 12 horas.
+    - cron: "0 */12 * * *"
 
 # Permite executar na na lista de Actions (utilizado para testes de build).
   workflow_dispatch:
@@ -20,8 +20,8 @@ jobs:
       - uses: actions/checkout@v2
 
     # Repositorio que será utilizado para gerar os arquivos.
-      - uses: Platane/snk@master
-        id: snake-gif
+      - uses: Platane/snk@v3
+        id: snake-svg
         with:
           github_user_name: viniciusy62
           gif_out_path: dist/github-contribution-grid-snake.gif
@@ -42,5 +42,9 @@ jobs:
           # the output branch we mentioned above
           target_branch: output
           build_dir: dist
+    outputs: |
+      dist/github-snake.svg
+      dist/github-snake-dark.svg?palette=github-dark
+      dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
